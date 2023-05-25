@@ -1,5 +1,7 @@
 #!/usr/bin/perl
-
+# Custom Script, based https://github.com/crphilipp/zabbix-agent-addons/blob/master/zabbix_scripts/check_mpath_sudo
+# By Meir-E
+# 
 use strict; # 
 use warnings; # 
 use JSON;
