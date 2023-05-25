@@ -17,6 +17,7 @@ my $pretty = 0;
 GetOptions(
 	"mpath=s" => \$mpath, # mpath device ? | 
 	'h|help'    => \$help,
+	't|test'    => \$testing,
 	"pretty"  => \$pretty
 );
 # -- Get load balancer here
