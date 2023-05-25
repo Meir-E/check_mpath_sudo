@@ -12,6 +12,7 @@ my $json   = {};
 my $mpath  = undef;
 my $help   = 0;
 my $pretty = 0;
+my $testing = "no";
 # -- Some Functions
 # -- Some Functions
 GetOptions(
