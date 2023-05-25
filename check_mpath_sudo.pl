@@ -34,8 +34,8 @@ _EOF
 my $multipathd = which('multipathd'); # multipathd | https://linux.die.net/man/8/multipathd | https://en.wikipedia.org/wiki/Linux_DM_Multipath
 
 if (not defined $multipathd){
-  print 'ZBX_NOTSUPPORTED';
-  exit 1;
+	print 'ZBX_NOTSUPPORTED';
+	exit 1;
 }
 $json = {
 	mpath              => $mpath,
