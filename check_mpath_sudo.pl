@@ -56,7 +56,7 @@ $json = {
 	paths_with_issue   => [],
 	errors             => [] };
 # Meir
-if ($testing == "yes")
+if ($testing eq "yes")
 {
 	print "-------------ME-deBug\n";
 	print "Testin mode here \n";
