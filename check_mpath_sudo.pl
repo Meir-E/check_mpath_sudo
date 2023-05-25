@@ -27,6 +27,7 @@ Usage : $0 --mpath=<name of the mpath device> [--pretty]
 
   * --mpath : the name of the device to check
   * --pretty : output pretty JSON, easier to read for humans
+  * --t|test : for debug purpose. leave some file for manual edit.
   * --help : display this help
 
 _EOF
@@ -54,8 +55,16 @@ $json = {
 	paths_with_issue   => [],
 	errors             => [] };
 # Meir
-#qx(multipathd show maps raw format "%n|%N|%S|%f|%t|%x|%0" > 002_mpath1.txt);
-#qx(multipathd show paths format "%m|%d|%t|%o|%T|%0|%z" > 002_mpath2.txt);
+if ($testing == "yes")
+{
+	print "-------------ME-deBug\n";
+	print "Testin mode here \n";
+	print "-------------ME-deBug\n";
+} else
+{
+	#qx(multipathd show maps raw format "%n|%N|%S|%f|%t|%x|%0" > 002_mpath1.txt);
+	#qx(multipathd show paths format "%m|%d|%t|%o|%T|%0|%z" > 002_mpath2.txt);
+}
 my @res = qx(cat 002_mpath1.txt); #execute system commands
 if ($? != 0){
 	push @{$json->{errors}}, "Failed to run multipathd show maps raw format";
