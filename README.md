@@ -5,3 +5,7 @@ cutom script based https://github.com/crphilipp/zabbix-agent-addons/blob/master/
 curl --ssl-no-revoke -L https://github.com/Meir-E/check_mpath_sudo/archive/refs/heads/main.zip > myfile.zip
 unzip -j myfile.zip && chmod +x check_mpath_sudo.pl && rm myfile.zip
 ```
+# Run Example
+```
+./check_mpath_sudo.pl --mpath ssvm2./check_mpath_sudo.pl --mpath ssvm2  --pretty
+```
