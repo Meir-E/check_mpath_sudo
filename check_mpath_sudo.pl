@@ -12,13 +12,13 @@ my $json   = {};
 my $mpath  = undef;
 my $help   = 0;
 my $pretty = 0;
-my $testing = "no";
+my $testing_mode = "no";
 # -- Some Functions
 # -- Some Functions
 GetOptions(
 	"mpath=s" => \$mpath, # mpath device ? | 
 	'h|help'    => \$help,
-	't|test=s'    => \$testing,
+	't|test=s'    => \$testing_mode,
 	"pretty"  => \$pretty
 );
 # -- Get load balancer here
@@ -41,6 +41,7 @@ if (not defined $multipathd){
 	exit 1;
 }
 $json = {
+	testing_mode       => $testing_mode,
 	mpath              => $mpath,
 	size               => 0,
 	dm_st              => 'unknown',
@@ -56,8 +57,8 @@ $json = {
 	paths_with_issue   => [],
 	errors             => [] };
 # Meir
-print $testing ;
-if ($testing eq "yes")
+print $testing_mode ;
+if ($testing_mode eq "yes")
 {
 	print "-------------ME-deBug\n";
 	print "Testin mode here \n";
