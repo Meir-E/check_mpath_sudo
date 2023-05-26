@@ -64,8 +64,8 @@ if ($testing eq "yes")
 	print "-------------ME-deBug\n";
 } else
 {
-	#qx(multipathd show maps raw format "%n|%N|%S|%f|%t|%x|%0" > 002_mpath1.txt);
-	#qx(multipathd show paths format "%m|%d|%t|%o|%T|%0|%z" > 002_mpath2.txt);
+	qx(multipathd show maps raw format "%n|%N|%S|%f|%t|%x|%0" > 002_mpath1.txt);
+	qx(multipathd show paths format "%m|%d|%t|%o|%T|%0|%z" > 002_mpath2.txt);
 }
 my @res = qx(cat 002_mpath1.txt); #execute system commands
 if ($? != 0){
@@ -118,9 +118,6 @@ foreach (@res){ # grep like over file: 002_mpath1.txt
 		$chk_st,
 		$failures,
 		$serial	) = split(/\s*\|\s*/, $_);
-	print "-------------ME-deBug\n";
-	print "$MEmpath ne $mpath ? \n";
-	print "-------------ME-deBug\n";
 	next if $MEmpath ne $mpath;
 	push @{$json->{paths_details}}, {
 		dev      => $dev,
