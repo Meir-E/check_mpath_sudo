@@ -7,9 +7,9 @@ unzip -jo myfile.zip && chmod +x check_mpath_sudo.pl && rm myfile.zip README.md
 ```
 # Run Example
 ```
-./check_mpath_sudo.pl --mpath ssvm2./check_mpath_sudo.pl --mpath ssvm2  --pretty
+./check_mpath_sudo.pl --mpath ssvm2./check_mpath_sudo --mpath ssvm2  --pretty
 ```
 # Run Example for Testing
 ```
-./check_mpath_sudo.pl --mpath ssvm2./check_mpath_sudo.pl --mpath ssvm2  --pretty --t yes
+./check_mpath_sudo.pl --mpath ssvm2./check_mpath_sudo --mpath ssvm2  --pretty --t yes
 ```
