@@ -1,7 +1,8 @@
 #!/usr/bin/perl
-# Custom Script, based https://github.com/crphilipp/zabbix-agent-addons/blob/master/zabbix_scripts/check_mpath_sudo
-# By Meir-E | https://github.com/Meir-E/check_mpath_sudo
+# Rework By Meir-E | https://github.com/Meir-E/check_mpath_sudo
+# Based on: https://git.fws.fr/fws/zabbix-agent-addons/src/branch/master/zabbix_scripts/check_mpath_sudo 
 # 26.05.2023
+# 
 use strict; # 
 use warnings; # 
 use JSON;
